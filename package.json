@@ -2,21 +2,18 @@
   "name": "ls-node-3-hw3",
   "version": "0.1.0",
   "private": true,
+  "author": "Sergei Tereshkov",
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "body-parser": "^1.19.0",
+    "pug": "^3.0.0",
     "crypto": "^1.0.1",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "express-session": "^1.17.1",
     "formidable": "^1.2.2",
+    "express-session": "^1.17.1",
+    "uuid": "^8.1.0",
     "lowdb": "^1.0.0",
     "nodemailer": "^6.4.8",
-    "nodemailer-sendgrid-transport": "^0.2.0",
-    "pug": "^3.0.0",
-    "uuid": "^8.1.0"
+    "nodemailer-sendgrid-transport": "^0.2.0"
   },
   "devDependencies": {
     "cz-customizable": "^6.2.0",
