@@ -1,46 +1,37 @@
 {
-  "name": "builder",
-  "version": "0.0.1",
-  "author": "krabaton",
-  "license": "ISC",
-  "scripts": {
-    "start": "set NODE_ENV=development&& gulp",
-    "build": "set NODE_ENV=production&& gulp build"
+  "name": "ls-node-3-hw3",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.17.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babelify": "^8.0.0",
-    "browser-sync": "^2.26.7",
-    "browserify": "^15.2.0",
-    "del": "^3.0.0",
-    "gulp": "4.0.0",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-cheerio": "^0.6.3",
-    "gulp-concat": "^2.6.1",
-    "gulp-concat-css": "^3.0.0",
-    "gulp-csso": "^3.0.1",
-    "gulp-eslint": "^5.0.0",
-    "gulp-if": "^2.0.2",
-    "gulp-load-plugins": "^1.6.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-pug": "^4.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-replace-task": "^0.11.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-svg-sprite": "^1.5.0",
-    "gulp-svgmin": "^2.2.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp.spritesmith": "^6.11.0",
-    "merge-stream": "^1.0.1",
-    "node-sass": "^4.14.1",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "cz-customizable": "^6.2.0",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^2.0.5"
   },
-  "dependencies": {
-    "jquery": "^3.5.1",
-    "normalize.css": "^7.0.0"
-  }
+  "scripts": {
+    "start": "node app.js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/git/commitizen.js"
+    }
+  },
+  "homepage": "."
 }
