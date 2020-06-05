@@ -1,37 +1,37 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  const skills = [
-    {
-      "number": 12,
-      "text": "Возраст начала занятий на скрипке"
-    },
-    {
-      "number": 76,
-      "text": "Концертов отыграл"
-    },
-    {
-      "number": 30,
-      "text": "Максимальное число городов в туре"
-    },
-    {
-      "number": 20,
-      "text": "Лет на сцене в качестве скрипача"
-    }
-  ]
-  res.render('pages/index', { skills });
+router.get('/', (req, res) => {
+  console.log('GET /');
+  res.send('GET /');
+});
+router.post('/', (req, res) => {
+  console.log('POST /');
+  res.send('POST /');
 });
 
-/* GET home page. */
-router.get('/login', function(req, res, next) {
-  res.render('pages/login', { title: 'Express' });
+router.get('/login', (req, res) => {
+  console.log('GET /login');
+  res.send('GET /login');
+});
+router.post('/login', (req, res) => {
+  console.log('POST /login');
+  res.send('POST /login');
 });
 
-/* GET home page. */
-router.get('/admin', function(req, res, next) {
-  res.render('pages/admin', { title: 'Express' });
+router.get('/admin', (req, res) => {
+  console.log('POST /admin');
+  res.send('POST /admin');
+});
+
+router.post('/admin/upload', (req, res) => {
+  console.log('POST /admin/upload');
+  res.send('POST /admin/upload');
+});
+
+router.post('/admin/skills', (req, res) => {
+  console.log('POST /admin/skills');
+  res.send('POST /admin/skills');
 });
 
 module.exports = router;
