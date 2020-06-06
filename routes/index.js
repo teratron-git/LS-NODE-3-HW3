@@ -1,37 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const mainController = require('../controllers/mainController');
+const loginController = require('../controllers/loginController');
+const adminController = require('../controllers/adminController');
+const isAdmin = require('../utils/isAdmin');
 
-router.get('/', (req, res) => {
-  console.log('GET /');
-  res.send('GET /');
-});
-router.post('/', (req, res) => {
-  console.log('POST /');
-  res.send('POST /');
-});
+router.get('/', mainController.get);
+router.post('/', mainController.post);
 
-router.get('/login', (req, res) => {
-  console.log('GET /login');
-  res.send('GET /login');
-});
-router.post('/login', (req, res) => {
-  console.log('POST /login');
-  res.send('POST /login');
-});
+router.get('/login', loginController.get);
+router.post('/login', loginController.post);
 
-router.get('/admin', (req, res) => {
-  console.log('POST /admin');
-  res.send('POST /admin');
-});
-
-router.post('/admin/upload', (req, res) => {
-  console.log('POST /admin/upload');
-  res.send('POST /admin/upload');
-});
-
-router.post('/admin/skills', (req, res) => {
-  console.log('POST /admin/skills');
-  res.send('POST /admin/skills');
-});
+router.get('/admin', isAdmin, adminController.get);
+router.post('/admin/upload', isAdmin, adminController.upload);
+router.post('/admin/skills', isAdmin, adminController.skills);
 
 module.exports = router;
