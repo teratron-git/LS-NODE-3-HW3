@@ -13,8 +13,8 @@ const transporter = nodemailer.createTransport(
 );
 
 module.exports.get = async (req, res) => {
-  const products = await Product.readData();
-  const skills = await Skill.readData();
+  const products = await Product.readDb();
+  const skills = await Skill.readDb();
   res.render('index', {
     title: 'Личная страница Архипова',
     products,
