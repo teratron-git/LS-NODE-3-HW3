@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 });
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
-  res.render('error', { message: err.message, error: err });
+  res.render('error', { message: err.message });
 });
 
 const server = app.listen(process.env.PORT || 3000, function () {
