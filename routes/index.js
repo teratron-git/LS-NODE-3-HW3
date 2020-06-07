@@ -1,37 +1,18 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const mainController = require('../controllers/mainController');
+const loginController = require('../controllers/loginController');
+const adminController = require('../controllers/adminController');
+const isAdmin = require('../utils/isAdmin');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  const skills = [
-    {
-      "number": 12,
-      "text": "Возраст начала занятий на скрипке"
-    },
-    {
-      "number": 76,
-      "text": "Концертов отыграл"
-    },
-    {
-      "number": 30,
-      "text": "Максимальное число городов в туре"
-    },
-    {
-      "number": 20,
-      "text": "Лет на сцене в качестве скрипача"
-    }
-  ]
-  res.render('pages/index', { skills });
-});
+router.get('/', mainController.get);
+router.post('/', mainController.post);
 
-/* GET home page. */
-router.get('/login', function(req, res, next) {
-  res.render('pages/login', { title: 'Express' });
-});
+router.get('/login', loginController.get);
+router.post('/login', loginController.post);
 
-/* GET home page. */
-router.get('/admin', function(req, res, next) {
-  res.render('pages/admin', { title: 'Express' });
-});
+router.get('/admin', isAdmin, adminController.get);
+router.post('/admin/upload', isAdmin, adminController.upload);
+router.post('/admin/skills', isAdmin, adminController.skills);
 
 module.exports = router;

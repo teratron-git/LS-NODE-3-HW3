@@ -12,6 +12,8 @@ block content
     section.admin-content
       .container.admin-content__container
         .form-container
+          if(msg)
+            .msg= msg
           form.form-skill(action='/admin/skills' method="POST")
             .form-title Счетчики
             if (msgskill)
