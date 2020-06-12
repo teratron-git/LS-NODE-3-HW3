@@ -18,21 +18,18 @@ module.exports.upload = async (req, res, next) => {
   }
 
   form.uploadDir = path.join(process.cwd(), upload);
-
   form.parse(req, function (err, fields, files) {
     if (err) {
       return next(err);
     }
 
     const uploadItem = uploadCheck(fields, files);
-
     if (uploadItem.err) {
       fs.unlinkSync(files.photo.path);
       return res.redirect(`/?msg=${uploadItem.status}`);
     }
 
     const fileName = path.join(upload, files.photo.name);
-
     fs.rename(files.photo.path, fileName, async (err) => {
       if (err) {
         console.error(err.message);

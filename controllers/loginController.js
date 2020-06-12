@@ -13,7 +13,6 @@ module.exports.get = function (req, res) {
 
 module.exports.post = (req, res) => {
   const user = User.findUser(req.body);
-
   if (user.length !== 0) {
     req.session.isAdmin = true;
     res.redirect('/admin');
