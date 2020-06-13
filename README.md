@@ -1,4 +1,4 @@
-# Домашнее задание курса Node.js (3 и 4)
+# Домашнее задание курса Node.js (3)
 
 ![Скриншот проекта](https://loftschool.com/uploads/course_logos/nodejs.svg?v=1513152963369)
 
@@ -73,8 +73,6 @@
 ```
 
 ##### Домашние задание №3 - реализовать серверную часть на [Express.js](http://expressjs.com/ru/)
-
-##### Домашние задание №4 - реализовать серверную часть на [Koa.js](http://koajs.com/)
 
 Данные хранить на сервере в JSON файле, можно использовать пакет [nconf](https://www.npmjs.com/package/nconf) или [LowDB](https://github.com/typicode/lowdb) на свое усмотрение
 
