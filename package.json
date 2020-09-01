@@ -16,7 +16,7 @@
     "nodemailer-sendgrid-transport": "^0.2.0"
   },
   "devDependencies": {
-    "cz-customizable": "^6.2.1",
+    "cz-customizable": "^6.3.0",
     "eslint": "^7.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
